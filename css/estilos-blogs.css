@@ -1,0 +1,146 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    margin: 70px;
+}
+
+header .contenido{
+    
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    /* width: 90% auto; */
+
+}
+
+header .contenido hr {
+    width: 100px;
+    border: 1px solid #FFAA3A;
+}
+
+header a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+header h1{
+    margin: 0px;
+    color: #FFAA3A;
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: large;
+}
+
+/* main */
+.main {
+    margin: 0px auto 50px auto;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.main .blogs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.main .blogs .blog {
+    width: 49%;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #8E8E8E;
+}
+
+.main .blogs .blog .img-blog{
+    width: 100%;
+    /* Se aplica esta propiedad para que las imágenes
+    tengan un alto fijo */
+    max-height: 200px;
+    min-height: 200px;
+    /* Se aplica esta propiedad para que las imágnes
+    no se salgan de su caja y deformen todo */
+    overflow: hidden;
+}
+
+.main .blogs .blog .img-blog img{
+    vertical-align: top;
+    width: 100%;
+    /* Para mover la imágen dentro de su cuadrito
+    y se vean partes que no, se moverá más arriba */
+    position: relative;
+    bottom: 60px;
+
+}
+
+.main .blogs .blog p {
+
+    font-family: 'Open Sans' Roboto;
+    font-size: 16px;
+    line-height: 30px;
+    /* color: #fff; */
+}
+
+footer {
+    background: #000;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-family: 'Open Sans' Roboto;
+    font-size: 16;
+    font-weight: lighter;
+    line-height: 30px;
+    color: #fff;
+    
+}
+
+/* media queries */
+
+@media screen and (max-width: 800px){
+    .main .blogs .blog .img-blog{
+        width: 100%;
+        /* Se aplica esta propiedad para que las imágenes
+        tengan un alto fijo */
+        max-height: 150px;
+        min-height: 150px;
+        /* Se aplica esta propiedad para que las imágnes
+        no se salgan de su caja y deformen todo */
+        overflow: hidden;
+    }
+    
+    .main .blogs .blog .img-blog img{
+        vertical-align: top;
+        width: 100%;
+        /* Para mover la imágen dentro de su cuadrito
+        y se vean partes que no, se moverá más arriba */
+        /* position: static; */
+        bottom: 40px;
+    
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+
+    .main .blogs .blog {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 360px){
+
+    footer p {
+        font-size: 12px;
+    }
+}
